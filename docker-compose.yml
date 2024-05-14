@@ -1,0 +1,45 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      cache_from:
+        - pivoapi:latest
+      args:
+        BASE_IMAGE: ${BASE_IMAGE}
+    image: pivoapi
+    container_name: PIVO_API
+    ports:
+      - "12345:20000"
+    volumes:
+      - .:/app
+      - /etc/localtime:/etc/localtime:ro
+      - django_static_volume:/app/static
+    env_file:
+      - .env
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - PIVO_API_Network
+
+
+  db:
+    image: postgres:13
+    container_name: PIVO_API_DB
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    networks:
+      - PIVO_API_Network
+
+
+volumes:
+  django_static_volume:
+  postgres_data:
+
+networks:
+  PIVO_API_Network:
+      driver: bridge

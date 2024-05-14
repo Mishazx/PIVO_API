@@ -1,0 +1,145 @@
+[
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 1,
+        "fields" :
+        {
+            "production_line_id": 1,
+            "event_type": "Техническое обслуживание",
+            "event_date": "2022-01-01",
+            "description": "Проведено техническое обслуживание линии для производства лагера"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 2,
+        "fields" :
+        {
+            "production_line_id": 1,
+            "event_type": "Замена оборудования",
+            "event_date": "2022-02-15",
+            "description": "Заменен заторный чан на линии для производства лагера"
+    }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 3,
+        "fields" :
+        {
+            "production_line_id": 2,
+            "event_type": "Пуск в эксплуатацию",
+            "event_date": "2022-03-01",
+            "description": "Линия для производства эля запущена в эксплуатацию после ремонта"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 4,
+        "fields" :
+        {
+            "production_line_id": 3,
+            "event_type": "Экспериментальное производство",
+            "event_date": "2022-04-10",
+            "description": "Проведено экспериментальное производство сезонного пива на линии для производства специальных пив"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 5,
+        "fields" :
+        {
+            "production_line_id": 4,
+            "event_type": "Плановый ремонт",
+            "event_date": "2022-05-01",
+            "description": "Проведен плановый ремонт оборудования на линии упаковки"
+        }    
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 6,
+        "fields" :
+        {
+            "production_line_id": 5,
+            "event_type": "Замена фильтров",
+            "event_date": "2022-06-15",
+            "description": "Заменены фильтры на линии фильтрации и финиширования"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 7,
+            "fields" :
+        {
+            "production_line_id": 6,
+            "event_type": "Обучение персонала",
+            "event_date": "2022-07-01",
+            "description": "Проведено обучение персонала на линии кегирования и распределения"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 8,
+        "fields" :
+        {
+            "production_line_id": 1,
+            "event_type": "Продление сертификата",
+            "event_date": "2022-08-01",
+            "description": "Продлен сертификат на производство лагера на линии для производства лагера"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 9,
+        "fields" :
+        {
+            "production_line_id": 2,
+            "event_type": "Изменение рецепта",
+            "event_date": "2022-09-10",
+            "description": "Изменен рецепт эля на линии для производства эля"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 10,
+        "fields" :
+        {
+            "production_line_id": 3,
+            "event_type": "Пуск в эксплуатацию",
+            "event_date": "2022-10-01",
+            "description": "Линия для производства специальных пив запущена в эксплуатацию после модернизации"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 11,
+        "fields" :
+        {
+            "production_line_id": 4,
+            "event_type": "Техническое обслуживание",
+            "event_date": "2022-11-15",
+            "description": "Проведено техническое обслуживание оборудования на линии упаковки"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 12,
+        "fields" :
+        {
+            "production_line_id": 5,
+            "event_type": "Замена оборудования",
+            "event_date": "2022-12-01",
+            "description": "Заменен варочный котел на линии фильтрации и финиширования"
+        }
+    },
+    {
+        "model": "Dashboards.brewingevent",
+        "pk": 13,
+        "fields" :
+        {
+            "production_line_id": 6,
+            "event_type": "Проведение аудита",
+            "event_date": "2022-12-15",
+            "description": "Проведен аудит на линии кегирования и распределения"
+        }
+    }
+]
