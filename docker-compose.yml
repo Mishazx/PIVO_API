@@ -2,7 +2,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.web
       cache_from:
         - pivoapi:latest
       args:
@@ -20,6 +20,8 @@ services:
     restart: always
     depends_on:
       - db
+      - redis
+      - worker
     networks:
       - PIVO_API_Network
 
@@ -35,6 +37,30 @@ services:
     networks:
       - PIVO_API_Network
 
+  redis:
+    image: redis:6.2
+    container_name: PIVO_redis
+    volumes:
+      - ./redis-data:/data
+    networks:
+      - PIVO_API_Network
+
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+      cache_from:
+        - pivoapi:latest
+      args:
+        BASE_IMAGE: ${BASE_IMAGE}
+    container_name: PIVO_CELERY
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    env_file:
+      - .env
+    networks:
+      - PIVO_API_Network
 
 volumes:
   django_static_volume:

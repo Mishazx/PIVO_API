@@ -1,6 +1,6 @@
 [
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 1,
         "fields" :
         {
@@ -11,7 +11,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 2,
         "fields" :
         {
@@ -22,7 +22,7 @@
     }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 3,
         "fields" :
         {
@@ -33,7 +33,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 4,
         "fields" :
         {
@@ -44,7 +44,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 5,
         "fields" :
         {
@@ -55,7 +55,7 @@
         }    
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 6,
         "fields" :
         {
@@ -66,7 +66,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 7,
             "fields" :
         {
@@ -77,7 +77,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 8,
         "fields" :
         {
@@ -88,7 +88,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 9,
         "fields" :
         {
@@ -99,7 +99,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 10,
         "fields" :
         {
@@ -110,7 +110,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 11,
         "fields" :
         {
@@ -121,7 +121,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 12,
         "fields" :
         {
@@ -132,7 +132,7 @@
         }
     },
     {
-        "model": "Dashboards.brewingevent",
+        "model": "Production.brewingevent",
         "pk": 13,
         "fields" :
         {

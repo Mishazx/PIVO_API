@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from.models import ProductionLine, BrewingEvent
-from.models import Equipment, TechnicalService
+from.models import Equipment, TechnicalService, ProductionLinePerformance
 
 
 class ProductionLineAdmin(admin.ModelAdmin):
@@ -17,15 +17,25 @@ class BrewingEventAdmin(admin.ModelAdmin):
 
 
 class EquipmentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'production_line')
+    list_display = ( 'production_line', 'name', 'description')
     search_fields = ('name',)
 admin.site.register(Equipment, EquipmentAdmin)
+
 
 class TechnicalServiceAdmin(admin.ModelAdmin):
     list_display = ('equipment', 'service_date', 'description')
     search_fields = ('equipment__name',)
 admin.site.register(TechnicalService, TechnicalServiceAdmin)
-    
+
+
+class ProductionLinePerformanceAdmin(admin.ModelAdmin):
+    list_display = ('production_line', 'timestamp', 'performance')
+    list_filter = ('production_line', 'timestamp')
+    search_fields = ('production_line__name', 'timestamp')
+    # admin.site.register(ProductionLine, ProductionLineAdmin)
+
+admin.site.register(ProductionLinePerformance, ProductionLinePerformanceAdmin)
+
     
 admin.site.register(BrewingEvent, BrewingEventAdmin)
     

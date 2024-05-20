@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Dashboards'
+    'celery',
+    'Production'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'PIVO_API.urls'
@@ -140,3 +143,93 @@ STATIC_ROOT = '/app/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = ['*']
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+}
+
+Q_CLUSTER = {
+    'name': 'qcluster',
+    'workers': 1,
+    'queue_limit': 10,
+    'timeout': 90,
+    'etry': 120,
+    'concurrency': 1,
+    'chedule': 'Production.tasks.process_production_line_data', # имя функции и модуля
+    'chedule_type': 'min', # тип расписания (min - каждую минуту)
+    'chedule_time': '*', # время запуска (каждую минуту)
+    'broker': 'PIVO_redis', # брокер сообщений
+    'redis': 'redis://redis:6379/0', # конфигурация Redis
+}
+
+APPEND_SLASH = True
+
+# CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000',  'https://beer.mishazx.ru', 'http://192.168.1.10:3000/', 'http://192.168.1.8:12346/']
+# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
+# 4
+
+# CORS_ALLOWED_ORIGINS = [
+#     "https://beer.mishazx.ru/",
+#     # "https://sub.example.com",
+#     "http://localhost:3000/",
+#     "http://127.0.0.1:3000/"
+# ]
+
+CSRF_TRUSTED_ORIGINS=['http://192.168.1.8:12346/','http://192.168.1.8:30000', 'https://api.beer.mishazx.ru', 'http://192.168.1.8:12345', 'http://localhost:3000', 'http://192.168.1.10:3000', 'http://192.168.1.8:3000', 'http://192.168.1.8:21000', 'https://www.mishazx.ru']
+
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+# CORS_ORIGIN_WHITELIST = (
+# # 5
+#        'http://localhost:3000',
+#        'http://127.0.0.1:3000',
+#        'http://192.168.1.10:3000',
+# )
+# CORS_ALLOW_HEADERS = "*"
+
+# CORS_ORIGIN_WHITELIST = (
+# # 'http://example.com',
+# 'http://127.0.0.1:3000',
+# 'http://localhost:3000',
+# )
+
+
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# from corsheaders.defaults import default_headers
+# CORS_ALLOW_HEADERS = list(default_headers) + [
+#     'X-Amz-Date',
+#     'Access-Control-Request-Headers',
+#     'Access-Control-Allow-Headers',
+#     'Access-Control-Allow-Origin',
+#     'SameSite',
+#     'XMLHttpRequest',
+# ]
+
+# CSRF_COOKIE_SAMESITE = 'None'
+# SESSION_COOKIE_SAMESITE = 'None'
+
+# CSRF_COOKIE_DOMAIN = '.mishazx.ru'
+# SESSION_COOKIE_DOMAIN = ".mishazx.ru"  # Or specify your domain
+
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+
+# SESSION_COOKIE_HTTPONLY = True
+# CSRF_COOKIE_HTTPONLY = True
+
+# CSRF_TRUSTED_ORIGINS=['http://localhost:3000']
+# CSRF_TRUSTED_ORIGINS=['http://192.168.1.8:30000', 'https://dev.iot.mishazx.ru', 'http://192.168.1.8:13000', 'http://localhost:3000', 'http://192.168.1.10:3000', 'http://192.168.1.8:3000', 'http://192.168.1.8:21000', 'https://www.mishazx.ru']
+

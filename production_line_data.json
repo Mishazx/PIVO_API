@@ -1,6 +1,6 @@
 [
     {
-        "model": "Dashboards.productionline",
+        "model": "Production.productionline",
         "pk": 1,
         "fields": 
         {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "Dashboards.productionline",
+        "model": "Production.productionline",
         "pk": 2,
         "fields": 
         {
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "Dashboards.productionline",
+        "model": "Production.productionline",
         "pk": 3,
         "fields": 
         {
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "Dashboards.productionline",
+        "model": "Production.productionline",
         "pk": 4,
         "fields": 
         {
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "Dashboards.productionline",
+        "model": "Production.productionline",
         "pk": 5,
         "fields": 
         {
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "Dashboards.productionline",
+        "model": "Production.productionline",
         "pk": 6,
         "fields": 
         {
