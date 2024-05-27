@@ -1,0 +1,42 @@
+[
+    {
+        "model": "Production.storagedata",
+        "pk": 0,
+        "fields": {
+            "name": "Солод",
+            "count": 2000
+        }
+    },
+    {
+        "model": "Production.storagedata",
+        "pk": 1,
+        "fields": {
+            "name": "Вода",
+            "count": 1300
+        }
+    },
+    {
+        "model": "Production.storagedata",
+        "pk": 2,
+        "fields": {
+            "name": "Дрожжи",
+            "count": 1300
+        }
+    },
+    {
+        "model": "Production.storagedata",
+        "pk": 3,
+        "fields": {
+            "name": "Хмель",
+            "count": 1200
+        }
+    },
+    {
+        "model": "Production.storagedata",
+        "pk": 4,
+        "fields": {
+            "name": "Свободно",
+            "count": 100
+        }
+    }
+]

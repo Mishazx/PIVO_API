@@ -1,0 +1,82 @@
+[
+    {
+        "model": "Production.characteristicproductionline",
+        "pk": 1,
+        "fields": {
+            "production_line": 1,
+            "operational_hours": 20,
+            "maintenance_frequency": "Каждые 2000 часов работы",
+            "energy_consumption": 60,
+            "staff_required": 8,
+            "downtime_per_month": 10,
+            "last_updated": "2023-02-20T14:30:00.000Z" 
+        }
+    },
+    {
+        "model": "Production.characteristicproductionline",
+        "pk": 2,
+        "fields": {
+            "production_line": 2,
+            "operational_hours": 18,
+            "maintenance_frequency": "Каждые 1500 часов работы",
+            "energy_consumption": 50,
+            "staff_required": 6,
+            "downtime_per_month": 15,
+            "last_updated": "2023-02-20T14:30:00.000Z" 
+        }
+    },
+    {
+        "model": "Production.characteristicproductionline",
+        "pk": 3,
+        "fields": {
+            "production_line": 3,
+            "operational_hours": 16,
+            "maintenance_frequency": "Каждые 1000 часов работы",
+            "energy_consumption": 40,
+            "staff_required": 5,
+            "downtime_per_month": 15,
+            "last_updated": "2023-02-20T14:30:00.000Z" 
+        }
+    },
+    {
+        "model": "Production.characteristicproductionline",
+        "pk": 4,
+        "fields": {
+            "production_line": 4,
+            "operational_hours": 22,
+            "maintenance_frequency": "Каждые 2500 часов работы",
+            "energy_consumption": 80,
+            "staff_required": 10,
+            "downtime_per_month": 8,
+            "last_updated": "2023-02-20T14:30:00.000Z" 
+        }
+    },
+    {
+        "model": "Production.characteristicproductionline",
+        "pk": 5,
+        "fields": {
+            "production_line": 5,
+            "operational_hours": 20,
+            "maintenance_frequency": "Каждые 1800 часов работы",
+            "energy_consumption": 70,
+            "staff_required": 7,
+            "downtime_per_month": 9,
+            "last_updated": "2023-02-20T14:30:00.000Z" 
+        }
+    },
+    {
+        "model": "Production.characteristicproductionline",
+        "pk": 6,
+        "fields": {
+            "production_line": 6,
+            "operational_hours": 18,
+            "maintenance_frequency": "Каждые 2000 часов работы",
+            "energy_consumption": 60,
+            "staff_required": 6,
+            "downtime_per_month": 11,
+            "last_updated": "2023-02-20T14:30:00.000Z" 
+        }
+    }
+    
+
+]

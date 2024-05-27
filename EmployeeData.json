@@ -1,0 +1,21 @@
+[
+    {"model": "Employee.employee","pk": 1,"fields": {"full_name": "Иванов Иван Иванович","position": "Инженер","photo": "photos/1.jpg","production_line": "кегирования и распределения"}},
+    {"model": "Employee.employee","pk": 2,"fields": {"full_name": "Петрова Алина Владимировна","position": "Техник","photo": "photos/2.jpg","production_line": "фильтрации и финиширования"}},
+    {"model": "Employee.employee","pk": 3,"fields": {"full_name": "Смородина Мария Сергеевна","position": "Специалист","photo": "photos/3.jpg","production_line": "упаковки"}},
+    {"model": "Employee.employee","pk": 4,"fields": {"full_name": "Кузнецова Дарья Олеговна","position": "Техник","photo": "photos/4.jpg","production_line": "для производства эля"}},
+    {"model": "Employee.employee","pk": 5,"fields": {"full_name": "Морозова Екатерина Николаевна","position": "Специалист","photo": "photos/5.jpg","production_line": "кегирования и распределения"}},
+    {"model": "Employee.employee","pk": 6,"fields": {"full_name": "Иванова Елена Николаевна","position": "Специалист","photo": "photos/6.jpg","production_line": "фильтрации и финиширования"}},
+    {"model": "Employee.employee","pk": 7,"fields": {"full_name": "Полякова Алина Владимировна","position": "Техник","photo": "photos/7.jpg","production_line": "упаковки"}},
+    {"model": "Employee.employee","pk": 8,"fields": {"full_name": "Соколова Мария Сергеевна","position": "Специалист","photo": "photos/8.jpg","production_line": "для производства специальных пив"}},
+    {"model": "Employee.employee","pk": 9,"fields": {"full_name": "Королева Дарья Олеговна","position": "Техник","photo": "photos/9.jpg","production_line": "кегирования и распределения"}},
+    {"model": "Employee.employee","pk": 10,"fields": {"full_name": "Иванова Екатерина Николаевна","position": "Специалист","photo": "photos/10.jpg","production_line": "фильтрации и финиширования"}},
+    {"model": "Employee.employee","pk": 11,"fields": {"full_name": "Петрова Мария Сергеевна","position": "Техник","photo": "photos/11.jpg","production_line": "упаковки"}},
+    {"model": "Employee.employee","pk": 12,"fields": {"full_name": "Смородина Дарья Олеговна","position": "Специалист","photo": "photos/12.jpg","production_line": "для производства эля"}},
+    {"model": "Employee.employee","pk": 13,"fields": {"full_name": "Кузнецова Елена Николаевна","position": "Специалист","photo": "photos/13.jpg","production_line": "кегирования и распределения"}},
+    {"model": "Employee.employee","pk": 14,"fields": {"full_name": "Морозова Мария Сергеевна","position": "Техник","photo": "photos/14.jpg","production_line": "фильтрации и финиширования"}},
+    {"model": "Employee.employee","pk": 15,"fields": {"full_name": "Иванова Алина Владимировна","position": "Техник","photo": "photos/15.jpg","production_line": "упаковки"}},
+    {"model": "Employee.employee","pk": 16,"fields": {"full_name": "Полякова Екатерина Николаевна","position": "Специалист","photo": "photos/16.jpg","production_line": "для производства специальных пив"}},
+    {"model": "Employee.employee","pk": 17,"fields": {"full_name": "Соколова Мария Сергеевна","position": "Специалист","photo": "photos/17.jpg","production_line": "кегирования и распределения"}},
+    {"model": "Employee.employee","pk": 18,"fields": {"full_name": "Королева Мария Сергеевна","position": "Техник","photo": "photos/18.jpg","production_line": "упаковки"}},
+    {"model": "Employee.employee","pk": 19,"fields": {"full_name": "Иванова Мария Сергеевна","position": "Специалист","photo": "photos/19.jpg","production_line": "для производства эля"}}
+]
