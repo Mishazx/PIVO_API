@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'celery',
     'Production',
+    'Journal',
     'Employee'
 ]
 
@@ -139,6 +140,10 @@ USE_TZ = False
 
 STATIC_URL = 'static/'
 STATIC_ROOT = '/app/static/'
+
+
+MEDIA_ROOT = '/app/photo/'
+MEDIA_URL = '/photo/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

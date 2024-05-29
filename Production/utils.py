@@ -44,5 +44,5 @@ def get_storage_data():
     
     
 def get_characteristic_production_lines():
-    data = list(CharacteristicProductionLine.objects.all().values('production_line__name', 'efficiency', 'operational_hours', 'maintenance_frequency', 'energy_consumption', 'staff_required', 'downtime_per_month'))
+    data = list(CharacteristicProductionLine.objects.all().values('production_line__name', 'efficiency', 'status', 'operational_hours', 'maintenance_frequency', 'energy_consumption', 'staff_required', 'downtime_per_month'))
     return data

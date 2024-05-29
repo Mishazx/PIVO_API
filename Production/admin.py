@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # import Employee
 
-from.models import BrewingEvent
+
 from.models import Equipment, TechnicalService, StorageData
 from .models import ProductionLine, ProductionLinePerformance, CharacteristicProductionLine
 
@@ -13,10 +13,7 @@ class ProductionLineAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description')
     
     
-class BrewingEventAdmin(admin.ModelAdmin):
-    list_display = ('id', 'production_line', 'event_type', 'event_date', 'description')
-    list_display_links = ('id', 'event_type')
-    search_fields = ('event_type', 'description')
+
 
 
 class EquipmentAdmin(admin.ModelAdmin):
@@ -41,7 +38,7 @@ class ProductionLinePerformanceAdmin(admin.ModelAdmin):
 
 
 class CharacteristicProductionLineAdmin(admin.ModelAdmin):
-    list_display = ('id', 'production_line', 'operational_hours', 'maintenance_frequency', 'energy_consumption', 'staff_required', 'downtime_per_month')
+    list_display = ('id', 'production_line', 'status', 'efficiency', 'operational_hours', 'maintenance_frequency', 'energy_consumption', 'staff_required', 'downtime_per_month')
     list_filter = ('production_line', 'maintenance_frequency')
     search_fields = ('production_line__name', 'maintenance_frequency')
     ordering = ('production_line', 'id')
@@ -78,6 +75,6 @@ admin.site.register(StorageData, StorageDataAdmin)
 admin.site.register(ProductionLinePerformance, ProductionLinePerformanceAdmin)
 admin.site.register(CharacteristicProductionLine, CharacteristicProductionLineAdmin)
     
-admin.site.register(BrewingEvent, BrewingEventAdmin)
+
     
 admin.site.register(ProductionLine, ProductionLineAdmin)

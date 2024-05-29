@@ -4,6 +4,8 @@
         "pk": 1,
         "fields": {
             "production_line": 1,
+            "status": "Работает",
+            "efficiency": 91, 
             "operational_hours": 20,
             "maintenance_frequency": "Каждые 2000 часов работы",
             "energy_consumption": 60,
@@ -17,6 +19,8 @@
         "pk": 2,
         "fields": {
             "production_line": 2,
+            "status": "Работает",
+            "efficiency": 98, 
             "operational_hours": 18,
             "maintenance_frequency": "Каждые 1500 часов работы",
             "energy_consumption": 50,
@@ -30,6 +34,8 @@
         "pk": 3,
         "fields": {
             "production_line": 3,
+            "status": "Требует обслуживания",
+            "efficiency": 76, 
             "operational_hours": 16,
             "maintenance_frequency": "Каждые 1000 часов работы",
             "energy_consumption": 40,
@@ -43,6 +49,8 @@
         "pk": 4,
         "fields": {
             "production_line": 4,
+            "status": "Работает",
+            "efficiency": 88, 
             "operational_hours": 22,
             "maintenance_frequency": "Каждые 2500 часов работы",
             "energy_consumption": 80,
@@ -56,6 +64,8 @@
         "pk": 5,
         "fields": {
             "production_line": 5,
+            "status": "Работает",
+            "efficiency": 90, 
             "operational_hours": 20,
             "maintenance_frequency": "Каждые 1800 часов работы",
             "energy_consumption": 70,
@@ -69,6 +79,8 @@
         "pk": 6,
         "fields": {
             "production_line": 6,
+            "status": "Работает",
+            "efficiency": 85, 
             "operational_hours": 18,
             "maintenance_frequency": "Каждые 2000 часов работы",
             "energy_consumption": 60,

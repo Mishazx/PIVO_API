@@ -9,15 +9,7 @@ class ProductionLine(models.Model):
         return self.name
     
     
-class BrewingEvent(models.Model):
-    id = models.AutoField(primary_key=True)
-    production_line = models.ForeignKey(ProductionLine, on_delete=models.CASCADE, verbose_name='Производственная линия')
-    event_type = models.CharField(max_length=50, verbose_name='Тип события')
-    event_date = models.DateField(verbose_name='Дата события')
-    description = models.TextField(verbose_name='Описание события')
-    
-    def __str__(self):
-        return f'{self.event_type} on {self.event_date}'
+
     
     
 class Equipment(models.Model):
@@ -33,11 +25,12 @@ class Equipment(models.Model):
 class TechnicalService(models.Model):
     id = models.AutoField(primary_key=True)
     equipment = models.ForeignKey(Equipment, on_delete=models.CASCADE, verbose_name='Оборудование')
+    production_line = models.ForeignKey(ProductionLine, on_delete=models.CASCADE, verbose_name='Производственная линия', default=None)
     service_date = models.DateField(verbose_name='Дата технического обслуживания')
     description = models.TextField(blank=True, verbose_name='Описание')
 
     def __str__(self):
-        return f'{self.equipment} --- {self.service_date}'
+        return f'{self.equipment}'
     
     
 class ProductionLinePerformance(models.Model):
@@ -49,6 +42,7 @@ class ProductionLinePerformance(models.Model):
 class CharacteristicProductionLine(models.Model):
     id = models.AutoField(primary_key=True)
     production_line = models.ForeignKey(ProductionLine, on_delete=models.CASCADE, verbose_name='Производственная линия')
+    status = models.CharField(max_length=100, help_text="Статус линии", default='')
     efficiency = models.FloatField(help_text="Эффективность производственной линии", default=0.0)
     operational_hours = models.IntegerField(help_text="Операционные часы в день")
     maintenance_frequency = models.CharField(max_length=100, help_text="Частота технического обслуживания")
